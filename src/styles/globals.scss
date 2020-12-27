@@ -9,6 +9,7 @@
 	--light: #f5f0eb;
 	--accent: #ec6d3c;
 	--dark: #071826;
+	--shadow-color: rgba(0, 0, 0, 0.16);
 }
 
 body {
@@ -39,7 +40,7 @@ header {
 	top: 0;
 	left: 0;
 	right: 0;
-	height: 5rem;
+	height: 3.5rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -47,7 +48,7 @@ header {
 	z-index: 100;
 
 	.logo-container {
-		margin-top: 5rem;
+		margin-top: 4rem;
 	}
 
 	.main-nav {
@@ -92,11 +93,15 @@ header {
 .cta-btn {
 	background-color: var(--accent);
 	color: var(--white);
-	padding: 0.75rem 1.5rem;
+	padding: 0.5rem 1.5rem;
 }
 
 .rounded {
 	border-radius: 4px;
+}
+
+.shadow {
+	box-shadow: 0 0 16px var(--shadow-color);
 }
 
 .section-f2p-desc {
@@ -113,33 +118,79 @@ header {
 
 .section-news {
 	position: relative;
-	background-color: var(--dark);
 	text-align: center;
-	padding: 12rem 2rem;
-	margin-top: -8rem;
+	padding: 2rem;
+	padding-top: 10rem;
 
 	svg {
 		position: absolute;
 		left: 0;
 		right: 0;
-		height: 4rem;
+		height: 42rem;
 		width: 100%;
 		fill: var(--dark);
-	}
-
-	svg.top {
-		top: -4rem;
-	}
-
-	svg.bottom {
-		bottom: -4rem;
+		top: -8rem;
+		z-index: -1;
 	}
 
 	h3 {
 		color: var(--white);
+		margin-bottom: 4rem;
 	}
-}
 
-.article-card {
-	background-color: var(--light);
+	.articles {
+		max-width: 1600px;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+		gap: 4rem;
+
+		.article-card {
+			position: relative;
+			background-color: var(--light);
+			text-align: left;
+
+			.article-thumb {
+				width: 100%;
+				height: auto;
+			}
+			.article-content {
+				padding: 2rem;
+				.article-title {
+					text-transform: uppercase;
+					font-weight: bold;
+					font-size: 1.5rem;
+					margin-bottom: -0.5rem;
+				}
+
+				.article-meta {
+					display: flex;
+
+					.article-date {
+						font-size: 0.75rem;
+					}
+
+					.article-tags {
+						font-size: 0.75rem;
+						margin-left: 0.5rem;
+						text-transform: uppercase;
+
+						&::before {
+							content: '| ';
+							color: var(--accent);
+						}
+					}
+				}
+
+				.article-excerpt {
+					line-height: 1.5rem;
+				}
+			}
+			.read-more-btn {
+				margin-top: -1rem;
+				position: absolute;
+				right: 2rem;
+			}
+		}
+	}
 }

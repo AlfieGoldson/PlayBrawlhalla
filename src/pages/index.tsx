@@ -30,25 +30,35 @@ export default function Home() {
 			<div className='section-news'>
 				<svg
 					className='top'
-					viewBox='0, 0, 10, 10'
+					viewBox='0, 0, 1, 1'
 					preserveAspectRatio='none'
 				>
-					<polygon points='0,10 10,0 10,10' />
-				</svg>
-				<svg
-					className='bottom'
-					viewBox='0, 0, 10, 10'
-					preserveAspectRatio='none'
-				>
-					<polygon points='0,0 0,10 10,0' />
+					<polygon points='0,0.15 1,0 1,0.85 0,1' />
 				</svg>
 				<h3>Recent News</h3>
 				<div className='articles'>
 					<ArticleCard
+						thumbUrl='/assets/RotationMainGraphic2_400x225.jpg'
 						title='Test Title'
-						date="Nov. 3 '99"
-						tags={['tag1', 'tag2']}
-						excerpt=''
+						date='Nov 3, 99'
+						tags={['Weekly Rotation']}
+						excerpt='It’s the most joyful time of the year! Last week we welcomed the Brawlhalliday season with a festive UI takeover, all new main menu music, bonus login Gold, and exclusive seasonal items, including Skins, a new Podium, Winter Holiday Colors, and much more! For those in...'
+						url='#'
+					/>
+					<ArticleCard
+						thumbUrl='/assets/RotationMainGraphic2_400x225.jpg'
+						title='Test Title'
+						date='Nov 3, 99'
+						tags={['Weekly Rotation']}
+						excerpt='It’s the most joyful time of the year! Last week we welcomed the Brawlhalliday season with a festive UI takeover, all new main menu music, bonus login Gold, and exclusive seasonal items, including Skins, a new Podium, Winter Holiday Colors, and much more! For those in...'
+						url='#'
+					/>
+					<ArticleCard
+						thumbUrl='/assets/RotationMainGraphic2_400x225.jpg'
+						title='Test Title'
+						date='Nov 3, 99'
+						tags={['Weekly Rotation']}
+						excerpt='It’s the most joyful time of the year! Last week we welcomed the Brawlhalliday season with a festive UI takeover, all new main menu music, bonus login Gold, and exclusive seasonal items, including Skins, a new Podium, Winter Holiday Colors, and much more! For those in...'
 						url='#'
 					/>
 				</div>
